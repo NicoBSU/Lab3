@@ -7,10 +7,12 @@
         <entry key="app/src/main/res/layout-land/activity_comment_form.xml" value="0.25" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout-land/activity_name_form.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_address_form.xml" value="0.40142572970627" />
+        <entry key="app/src/main/res/layout/activity_address_form.xml" value="0.5673927968397209" />
         <entry key="app/src/main/res/layout/activity_comment_form.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_name_form.xml" value="0.39483033979658205" />
+        <entry key="app/src/main/res/menu/form_menu.xml" value="0.5609655696533626" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.21666666666666667" />
       </map>
     </option>
   </component>

@@ -3,14 +3,18 @@ package com.example.lab3;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IConfirmCheck {
     private TextView textName;
     private TextView textAddress;
     private TextView textComment;
@@ -28,6 +32,34 @@ public class MainActivity extends AppCompatActivity {
         textAddress = findViewById(R.id.textAddress);
         textComment = findViewById(R.id.textComment);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.cancelOption:
+                DialogFragment dialog = new ConfirmDialogFragment();
+                dialog.show(getSupportFragmentManager(), "ConfirmDialogFragment");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void confirmButtonClicked() {
+        finishAndRemoveTask();
+        System.exit(0);
+    }
+
+    @Override
+    public void cancelButtonClicked() {}
 
     private ActivityResultLauncher<Intent> formActivityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
