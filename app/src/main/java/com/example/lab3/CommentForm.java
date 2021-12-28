@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class CommentForm extends AppCompatActivity {
 
-    private EditText commentInput;
+    private EditText inputComment;
 
     private String comment;
 
@@ -22,13 +22,13 @@ public class CommentForm extends AppCompatActivity {
         Intent intent = getIntent();
         comment = intent.getStringExtra(MainActivity.COMMENT);
 
-        commentInput = findViewById(R.id.commentInputText);
-        commentInput.setText(comment);
+        inputComment = findViewById(R.id.commentInputText);
+        inputComment.setText(comment);
     }
 
     public void save(View view) {
         Intent returnIntent = new Intent();
-        comment = commentInput.getText().toString();
+        comment = inputComment.getText().toString();
         returnIntent.putExtra(MainActivity.COMMENT, comment);
         this.setResult(Activity.RESULT_OK, returnIntent);
         this.finish();

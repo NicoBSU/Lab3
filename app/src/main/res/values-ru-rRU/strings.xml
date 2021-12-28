@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Лаб3</string>
+    <string name="userName">Случайный пользователь</string>
+    <string name="userAddress">Случайный адрес</string>
+    <string name="comment">Случайный коммент</string>
+    <string name="editButton">Изменить</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отменить</string>
+    <string name="country">Страна</string>
+    <string name="city">Город</string>
+    <string name="address">Адрес</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+</resources>
