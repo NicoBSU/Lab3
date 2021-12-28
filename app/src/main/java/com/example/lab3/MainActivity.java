@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements IConfirmCheck {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch(item.getItemId()){
-            case R.id.cancelOption:
+            case R.id.exitOption:
                 DialogFragment dialog = new ConfirmDialogFragment();
                 dialog.show(getSupportFragmentManager(), "ConfirmDialogFragment");
                 return true;
